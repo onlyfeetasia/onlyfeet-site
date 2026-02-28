@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#100818"/><stop offset="100%" stop-color="#281030"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="#e090c0" stop-opacity="0.18"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <!-- Hanbok flowing fabric shapes -->
+  <ellipse cx="280" cy="350" rx="120" ry="180" fill="rgba(220,144,192,0.07)" transform="rotate(-20,280,350)"/>
+  <ellipse cx="520" cy="360" rx="110" ry="170" fill="rgba(180,120,220,0.07)" transform="rotate(15,520,360)"/>
+  <!-- Fabric pattern - subtle grid -->
+  <line x1="200" y1="200" x2="600" y2="200" stroke="#e090c0" stroke-width="0.4" opacity="0.08"/>
+  <line x1="200" y1="220" x2="600" y2="220" stroke="#e090c0" stroke-width="0.3" opacity="0.06"/>
+  <line x1="200" y1="240" x2="600" y2="240" stroke="#e090c0" stroke-width="0.4" opacity="0.08"/>
+  <!-- Circle -->
+  <circle cx="400" cy="265" r="120" fill="none" stroke="#e090c0" stroke-width="0.8" opacity="0.18"/>
+  <circle cx="400" cy="265" r="90"  fill="rgba(220,144,192,0.06)"/>
+  <!-- Text -->
+  <text x="400" y="445" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#fff" opacity="0.90">Hanbok Grace</text>
+  <text x="400" y="480" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#e090c0" letter-spacing="4" opacity="0.85">KOREAN FEET</text>
+  <text x="400" y="505" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" letter-spacing="3">ONLYFEET.ASIA</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#080510"/><stop offset="50%" stop-color="#100818"/><stop offset="100%" stop-color="#181025"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="55%" r="55%"><stop offset="0%" stop-color="#ff6090" stop-opacity="0.18"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <!-- Neon sign glow blobs -->
+  <ellipse cx="200" cy="280" rx="40" ry="15" fill="#ff6090" opacity="0.12"/>
+  <ellipse cx="600" cy="260" rx="35" ry="12" fill="#6090ff" opacity="0.12"/>
+  <ellipse cx="400" cy="200" rx="50" ry="18" fill="#ff9030" opacity="0.10"/>
+  <!-- City lights (dots) -->
+  <circle cx="80"  cy="350" r="2" fill="#ff6090" opacity="0.45"/>
+  <circle cx="140" cy="330" r="1.5" fill="#6090ff" opacity="0.40"/>
+  <circle cx="260" cy="360" r="2" fill="#ff9030" opacity="0.40"/>
+  <circle cx="400" cy="340" r="1.5" fill="#ff6090" opacity="0.45"/>
+  <circle cx="540" cy="355" r="2" fill="#6090ff" opacity="0.40"/>
+  <circle cx="660" cy="345" r="1.5" fill="#ff9030" opacity="0.35"/>
+  <circle cx="720" cy="360" r="2" fill="#ff6090" opacity="0.40"/>
+  <!-- Street line -->
+  <line x1="0" y1="400" x2="800" y2="400" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <!-- Text -->
+  <text x="400" y="450" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#fff" opacity="0.90">Manila Lights</text>
+  <text x="400" y="485" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#ff6090" letter-spacing="4" opacity="0.85">FILIPINO FEET</text>
+  <text x="400" y="510" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" letter-spacing="3">ONLYFEET.ASIA</text>
+</svg>

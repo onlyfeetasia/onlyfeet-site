@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#080810"/><stop offset="100%" stop-color="#141428"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="#40d0d0" stop-opacity="0.15"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <!-- K-style geometric shapes -->
+  <rect x="260" y="160" width="280" height="280" fill="none" stroke="#40d0d0" stroke-width="0.8" opacity="0.15" transform="rotate(15,400,300)"/>
+  <rect x="280" y="180" width="240" height="240" fill="none" stroke="#40d0d0" stroke-width="0.5" opacity="0.10" transform="rotate(30,400,300)"/>
+  <circle cx="400" cy="265" r="80" fill="rgba(64,208,208,0.07)"/>
+  <!-- Diagonal fashion lines -->
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#40d0d0" stroke-width="0.4" opacity="0.08"/>
+  <line x1="0" y1="290" x2="800" y2="310" stroke="#ff80c0" stroke-width="0.3" opacity="0.08"/>
+  <!-- Text -->
+  <text x="400" y="445" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#fff" opacity="0.90">K-Style</text>
+  <text x="400" y="480" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40d0d0" letter-spacing="4" opacity="0.85">KOREAN FEET</text>
+  <text x="400" y="505" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" letter-spacing="3">ONLYFEET.ASIA</text>
+</svg>

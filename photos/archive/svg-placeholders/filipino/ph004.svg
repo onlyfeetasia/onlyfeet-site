@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#080a10"/><stop offset="100%" stop-color="#101418"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#80c0d0" stop-opacity="0.18"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <!-- Cliff silhouette shapes -->
+  <polygon points="0,600 0,350 120,260 220,300 300,220 380,280 400,600" fill="rgba(60,80,100,0.15)"/>
+  <polygon points="800,600 800,360 700,270 600,310 540,230 460,290 400,600" fill="rgba(60,80,100,0.12)"/>
+  <!-- Ocean horizon -->
+  <rect x="220" y="290" width="360" height="60" fill="rgba(120,200,220,0.07)"/>
+  <!-- Wind lines -->
+  <line x1="0"   y1="200" x2="200" y2="210" stroke="#80c0d0" stroke-width="0.6" opacity="0.12"/>
+  <line x1="0"   y1="215" x2="180" y2="222" stroke="#80c0d0" stroke-width="0.4" opacity="0.09"/>
+  <line x1="600" y1="195" x2="800" y2="205" stroke="#80c0d0" stroke-width="0.6" opacity="0.12"/>
+  <!-- Text -->
+  <text x="400" y="445" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#fff" opacity="0.90">Batanes Breeze</text>
+  <text x="400" y="480" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#80c0d0" letter-spacing="4" opacity="0.85">FILIPINO FEET</text>
+  <text x="400" y="505" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" letter-spacing="3">ONLYFEET.ASIA</text>
+</svg>

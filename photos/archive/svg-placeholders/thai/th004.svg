@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#100808"/><stop offset="40%" stop-color="#281010"/><stop offset="100%" stop-color="#0a0505"/></linearGradient>
+    <radialGradient id="sun" cx="50%" cy="35%" r="35%"><stop offset="0%" stop-color="#ffa030" stop-opacity="0.35"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#sun)"/>
+  <!-- Setting sun disc -->
+  <circle cx="400" cy="230" r="70" fill="rgba(255,160,40,0.15)" stroke="#ffa030" stroke-width="1" opacity="0.30"/>
+  <circle cx="400" cy="230" r="50" fill="rgba(255,180,60,0.18)"/>
+  <!-- Sea horizon line -->
+  <line x1="0" y1="380" x2="800" y2="380" stroke="rgba(255,140,40,0.15)" stroke-width="1.5"/>
+  <!-- Sun reflection on water -->
+  <path d="M360,380 Q400,500 440,380" fill="rgba(255,160,40,0.08)"/>
+  <!-- Wave -->
+  <path d="M0,380 Q200,360 400,380 Q600,400 800,380 L800,450 L0,450 Z" fill="rgba(80,40,20,0.12)"/>
+  <!-- Text -->
+  <text x="400" y="455" text-anchor="middle" font-family="Georgia,serif" font-size="28" fill="#fff" opacity="0.90">Golden Hour Koh Lanta</text>
+  <text x="400" y="488" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#ffa030" letter-spacing="4" opacity="0.85">THAI FEET</text>
+  <text x="400" y="512" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" letter-spacing="3">ONLYFEET.ASIA</text>
+</svg>

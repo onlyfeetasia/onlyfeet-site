@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#050d18"/><stop offset="100%" stop-color="#081828"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="60%" r="55%"><stop offset="0%" stop-color="#60c0ff" stop-opacity="0.18"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <!-- Ocean waves -->
+  <path d="M0,360 Q100,330 200,360 Q300,390 400,360 Q500,330 600,360 Q700,390 800,360 L800,600 L0,600 Z" fill="rgba(96,192,255,0.07)"/>
+  <path d="M0,390 Q100,365 200,390 Q300,415 400,390 Q500,365 600,390 Q700,415 800,390 L800,600 L0,600 Z" fill="rgba(96,192,255,0.05)"/>
+  <path d="M0,420 Q150,400 300,420 Q450,440 600,420 Q700,408 800,420 L800,600 L0,600 Z" fill="rgba(96,192,255,0.04)"/>
+  <!-- Horizon glow -->
+  <rect x="0" y="340" width="800" height="30" fill="rgba(100,200,255,0.04)"/>
+  <!-- Circle -->
+  <circle cx="400" cy="260" r="110" fill="none" stroke="#60c0ff" stroke-width="0.8" opacity="0.18"/>
+  <!-- Text -->
+  <text x="400" y="445" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#fff" opacity="0.90">Gentle Wave</text>
+  <text x="400" y="480" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#60c0ff" letter-spacing="4" opacity="0.85">KOREAN FEET</text>
+  <text x="400" y="505" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" letter-spacing="3">ONLYFEET.ASIA</text>
+</svg>
