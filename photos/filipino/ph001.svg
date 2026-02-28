@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#051018"/><stop offset="100%" stop-color="#082028"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="#40d8c0" stop-opacity="0.20"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <!-- Tropical beach: sand + ocean -->
+  <rect x="0" y="400" width="800" height="200" fill="rgba(240,210,160,0.06)"/>
+  <rect x="0" y="340" width="800" height="80" fill="rgba(64,216,192,0.07)"/>
+  <!-- Palm leaf shadow -->
+  <path d="M100,0 Q300,200 200,400" fill="none" stroke="rgba(80,200,100,0.12)" stroke-width="20" stroke-linecap="round"/>
+  <path d="M700,0 Q550,200 650,380" fill="none" stroke="rgba(80,200,100,0.10)" stroke-width="18" stroke-linecap="round"/>
+  <!-- Ocean sparkle dots -->
+  <circle cx="200" cy="360" r="2" fill="#40d8c0" opacity="0.30"/>
+  <circle cx="350" cy="355" r="1.5" fill="#40d8c0" opacity="0.25"/>
+  <circle cx="500" cy="362" r="2" fill="#40d8c0" opacity="0.30"/>
+  <circle cx="650" cy="357" r="1.5" fill="#40d8c0" opacity="0.25"/>
+  <!-- Circle -->
+  <circle cx="400" cy="260" r="110" fill="none" stroke="#40d8c0" stroke-width="0.8" opacity="0.18"/>
+  <!-- Text -->
+  <text x="400" y="445" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#fff" opacity="0.90">Island Bloom</text>
+  <text x="400" y="480" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40d8c0" letter-spacing="4" opacity="0.85">FILIPINO FEET</text>
+  <text x="400" y="505" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" letter-spacing="3">ONLYFEET.ASIA</text>
+</svg>

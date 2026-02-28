@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#080508"/><stop offset="100%" stop-color="#120810"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="#ff8040" stop-opacity="0.20"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <!-- Lanterns (circles with glow) -->
+  <circle cx="200" cy="160" r="28" fill="rgba(255,80,40,0.18)" stroke="#ff8040" stroke-width="1" opacity="0.40"/>
+  <circle cx="200" cy="160" r="20" fill="rgba(255,120,40,0.22)"/>
+  <circle cx="320" cy="120" r="22" fill="rgba(255,180,40,0.18)" stroke="#ffb830" stroke-width="1" opacity="0.40"/>
+  <circle cx="320" cy="120" r="15" fill="rgba(255,200,60,0.20)"/>
+  <circle cx="480" cy="140" r="25" fill="rgba(255,80,40,0.18)" stroke="#ff8040" stroke-width="1" opacity="0.40"/>
+  <circle cx="480" cy="140" r="17" fill="rgba(255,120,40,0.22)"/>
+  <circle cx="620" cy="155" r="20" fill="rgba(255,180,40,0.18)" stroke="#ffb830" stroke-width="1" opacity="0.35"/>
+  <circle cx="620" cy="155" r="13" fill="rgba(255,200,60,0.18)"/>
+  <!-- Lantern strings -->
+  <line x1="200" y1="0" x2="200" y2="132" stroke="#ff8040" stroke-width="0.6" opacity="0.20"/>
+  <line x1="320" y1="0" x2="320" y2="98" stroke="#ffb830" stroke-width="0.6" opacity="0.18"/>
+  <line x1="480" y1="0" x2="480" y2="115" stroke="#ff8040" stroke-width="0.6" opacity="0.20"/>
+  <line x1="620" y1="0" x2="620" y2="135" stroke="#ffb830" stroke-width="0.5" opacity="0.18"/>
+  <!-- River reflection glows -->
+  <ellipse cx="200" cy="460" rx="25" ry="60" fill="rgba(255,80,40,0.08)"/>
+  <ellipse cx="320" cy="480" rx="20" ry="55" fill="rgba(255,180,40,0.07)"/>
+  <ellipse cx="480" cy="465" rx="22" ry="58" fill="rgba(255,80,40,0.08)"/>
+  <ellipse cx="620" cy="475" rx="18" ry="52" fill="rgba(255,180,40,0.07)"/>
+  <!-- River line -->
+  <line x1="0" y1="410" x2="800" y2="410" stroke="rgba(255,160,80,0.10)" stroke-width="1"/>
+  <!-- Text -->
+  <text x="400" y="455" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#fff" opacity="0.90">Hoi An Lanterns</text>
+  <text x="400" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#ff8040" letter-spacing="4" opacity="0.85">VIETNAMESE FEET</text>
+  <text x="400" y="515" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" letter-spacing="3">ONLYFEET.ASIA</text>
+</svg>

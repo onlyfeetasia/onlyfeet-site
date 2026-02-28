@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#050810"/><stop offset="100%" stop-color="#081220"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="#40c0a0" stop-opacity="0.18"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <!-- Limestone karsts (simplified tall shapes) -->
+  <ellipse cx="150" cy="350" rx="45" ry="130" fill="rgba(60,100,80,0.15)" stroke="rgba(80,140,100,0.12)" stroke-width="1"/>
+  <ellipse cx="280" cy="320" rx="40" ry="150" fill="rgba(60,100,80,0.12)" stroke="rgba(80,140,100,0.10)" stroke-width="1"/>
+  <ellipse cx="580" cy="330" rx="50" ry="140" fill="rgba(60,100,80,0.14)" stroke="rgba(80,140,100,0.11)" stroke-width="1"/>
+  <ellipse cx="700" cy="355" rx="38" ry="125" fill="rgba(60,100,80,0.12)"/>
+  <!-- Water -->
+  <rect x="0" y="440" width="800" height="160" fill="rgba(64,192,160,0.06)"/>
+  <!-- Karst reflections -->
+  <ellipse cx="150" cy="490" rx="45" ry="40" fill="rgba(60,100,80,0.08)"/>
+  <ellipse cx="580" cy="480" rx="50" ry="38" fill="rgba(60,100,80,0.07)"/>
+  <!-- Text -->
+  <text x="400" y="455" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#fff" opacity="0.90">Halong Bay</text>
+  <text x="400" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#40c0a0" letter-spacing="4" opacity="0.85">VIETNAMESE FEET</text>
+  <text x="400" y="515" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" letter-spacing="3">ONLYFEET.ASIA</text>
+</svg>

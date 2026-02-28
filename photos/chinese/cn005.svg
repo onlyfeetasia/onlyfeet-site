@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#100808"/><stop offset="100%" stop-color="#201010"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#d08040" stop-opacity="0.15"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <!-- Hutong alley walls (abstract) -->
+  <rect x="80"  y="0" width="120" height="600" fill="rgba(200,150,80,0.05)"/>
+  <rect x="600" y="0" width="120" height="600" fill="rgba(200,150,80,0.05)"/>
+  <!-- Alley lane -->
+  <polygon points="200,0 600,0 500,600 300,600" fill="rgba(200,150,80,0.03)"/>
+  <!-- Doorway arch -->
+  <path d="M340 160 Q400 100 460 160 L460 340 L340 340 Z" fill="none" stroke="#d08040" stroke-width="1" opacity="0.20"/>
+  <!-- Ground texture lines -->
+  <line x1="200" y1="400" x2="600" y2="400" stroke="#d08040" stroke-width="0.5" opacity="0.10"/>
+  <line x1="220" y1="420" x2="580" y2="420" stroke="#d08040" stroke-width="0.4" opacity="0.08"/>
+  <!-- Text -->
+  <text x="400" y="450" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#fff" opacity="0.90">Hutong Harmony</text>
+  <text x="400" y="485" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#d08040" letter-spacing="4" opacity="0.85">CHINESE FEET</text>
+  <text x="400" y="510" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" letter-spacing="3">ONLYFEET.ASIA</text>
+</svg>

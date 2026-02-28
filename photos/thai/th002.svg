@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#050508"/><stop offset="40%" stop-color="#0a0810"/><stop offset="100%" stop-color="#100a18"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="55%" r="60%"><stop offset="0%" stop-color="#ff6020" stop-opacity="0.18"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <!-- Street food stall glow -->
+  <ellipse cx="200" cy="340" rx="60" ry="20" fill="#ff6020" opacity="0.12"/>
+  <ellipse cx="580" cy="330" rx="55" ry="18" fill="#ffa020" opacity="0.10"/>
+  <!-- Neon Thai script (abstract lines) -->
+  <rect x="150" y="200" width="80" height="8" fill="#ff6090" opacity="0.20" rx="3"/>
+  <rect x="150" y="215" width="60" height="5" fill="#ff6090" opacity="0.15" rx="2"/>
+  <rect x="570" y="205" width="75" height="7" fill="#60c0ff" opacity="0.18" rx="3"/>
+  <rect x="570" y="218" width="55" height="5" fill="#60c0ff" opacity="0.13" rx="2"/>
+  <!-- Tuk-tuk wheel (circle) -->
+  <circle cx="400" cy="380" rx="50" ry="50" r="50" fill="none" stroke="#ff9020" stroke-width="1" opacity="0.18"/>
+  <circle cx="400" cy="380" r="15" fill="rgba(255,144,32,0.10)"/>
+  <!-- Street line -->
+  <line x1="0" y1="430" x2="800" y2="430" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <!-- Text -->
+  <text x="400" y="475" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#fff" opacity="0.90">Bangkok Nights</text>
+  <text x="400" y="510" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#ff9020" letter-spacing="4" opacity="0.85">THAI FEET</text>
+  <text x="400" y="535" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" letter-spacing="3">ONLYFEET.ASIA</text>
+</svg>

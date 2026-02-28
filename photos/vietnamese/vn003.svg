@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a0510"/><stop offset="100%" stop-color="#181020"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="#e0a0c0" stop-opacity="0.18"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <!-- Áo dài silk fabric lines (flowing diagonal) -->
+  <line x1="200" y1="0" x2="100" y2="600" stroke="#e0a0c0" stroke-width="0.8" opacity="0.12"/>
+  <line x1="280" y1="0" x2="180" y2="600" stroke="#e0a0c0" stroke-width="0.6" opacity="0.09"/>
+  <line x1="550" y1="0" x2="650" y2="600" stroke="#e0a0c0" stroke-width="0.8" opacity="0.12"/>
+  <line x1="480" y1="0" x2="580" y2="600" stroke="#e0a0c0" stroke-width="0.6" opacity="0.09"/>
+  <!-- Colonial building columns (abstract) -->
+  <rect x="140" y="100" width="10" height="350" fill="rgba(240,220,200,0.06)"/>
+  <rect x="180" y="100" width="10" height="350" fill="rgba(240,220,200,0.06)"/>
+  <rect x="610" y="100" width="10" height="350" fill="rgba(240,220,200,0.06)"/>
+  <rect x="650" y="100" width="10" height="350" fill="rgba(240,220,200,0.06)"/>
+  <!-- Circle -->
+  <circle cx="400" cy="260" r="120" fill="none" stroke="#e0a0c0" stroke-width="0.8" opacity="0.18"/>
+  <!-- Text -->
+  <text x="400" y="455" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#fff" opacity="0.90">Áo Dài Grace</text>
+  <text x="400" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#e0a0c0" letter-spacing="4" opacity="0.85">VIETNAMESE FEET</text>
+  <text x="400" y="515" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" letter-spacing="3">ONLYFEET.ASIA</text>
+</svg>

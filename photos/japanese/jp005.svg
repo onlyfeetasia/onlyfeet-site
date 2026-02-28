@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#0a1a28"/><stop offset="50%" stop-color="#1a2a3a"/><stop offset="100%" stop-color="#0a1010"/></linearGradient>
+    <radialGradient id="mountain" cx="50%" cy="45%" r="40%"><stop offset="0%" stop-color="#e0f0ff" stop-opacity="0.10"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#mountain)"/>
+  <!-- Mt Fuji silhouette (simplified) -->
+  <polygon points="400,140 280,360 520,360" fill="rgba(220,235,255,0.08)" stroke="rgba(220,235,255,0.15)" stroke-width="1"/>
+  <!-- Snow cap -->
+  <polygon points="400,140 365,210 435,210" fill="rgba(255,255,255,0.12)"/>
+  <!-- Sky gradient band -->
+  <rect x="0" y="355" width="800" height="60" fill="rgba(0,40,80,0.20)"/>
+  <!-- Circle overlay -->
+  <circle cx="400" cy="260" r="120" fill="none" stroke="rgba(220,235,255,0.18)" stroke-width="0.8"/>
+  <!-- Text -->
+  <text x="400" y="440" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#fff" opacity="0.90">Mt. Fuji View</text>
+  <text x="400" y="475" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#a0c8f0" letter-spacing="4" opacity="0.85">JAPANESE FEET</text>
+  <text x="400" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" letter-spacing="3">ONLYFEET.ASIA</text>
+</svg>

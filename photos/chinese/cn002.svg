@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#0a0508"/><stop offset="40%" stop-color="#1a0a10"/><stop offset="100%" stop-color="#280814"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="60%" r="50%"><stop offset="0%" stop-color="#ff6040" stop-opacity="0.15"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <!-- City skyline silhouette -->
+  <rect x="50"  y="280" width="30"  height="160" fill="rgba(255,255,255,0.04)"/>
+  <rect x="90"  y="220" width="25"  height="220" fill="rgba(255,255,255,0.05)"/>
+  <rect x="125" y="250" width="35"  height="190" fill="rgba(255,255,255,0.04)"/>
+  <rect x="600" y="230" width="40"  height="210" fill="rgba(255,255,255,0.05)"/>
+  <rect x="650" y="260" width="28"  height="180" fill="rgba(255,255,255,0.04)"/>
+  <rect x="688" y="200" width="55"  height="240" fill="rgba(255,255,255,0.06)"/>
+  <!-- Huangpu River glow -->
+  <rect x="0" y="430" width="800" height="80" fill="rgba(255,100,40,0.05)"/>
+  <!-- Bridge cables (abstract) -->
+  <line x1="250" y1="150" x2="400" y2="380" stroke="#f0a040" stroke-width="0.6" opacity="0.12"/>
+  <line x1="550" y1="150" x2="400" y2="380" stroke="#f0a040" stroke-width="0.6" opacity="0.12"/>
+  <!-- Text -->
+  <text x="400" y="440" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#fff" opacity="0.90">Shanghai Dusk</text>
+  <text x="400" y="475" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#f0a040" letter-spacing="4" opacity="0.85">CHINESE FEET</text>
+  <text x="400" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" letter-spacing="3">ONLYFEET.ASIA</text>
+</svg>

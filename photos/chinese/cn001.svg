@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1a0505"/><stop offset="100%" stop-color="#3a0808"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="#f0a040" stop-opacity="0.18"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <!-- Garden elements: circular moon gate -->
+  <circle cx="400" cy="265" r="130" fill="none" stroke="#f0c060" stroke-width="1.5" opacity="0.25"/>
+  <circle cx="400" cy="265" r="125" fill="none" stroke="#f0c060" stroke-width="0.5" opacity="0.12"/>
+  <!-- Reflection pool -->
+  <ellipse cx="400" cy="420" rx="160" ry="30" fill="rgba(240,192,96,0.07)" stroke="#f0c060" stroke-width="0.8" opacity="0.20"/>
+  <!-- Corner decorations (traditional pattern dots) -->
+  <circle cx="100" cy="100" r="4" fill="#f0c060" opacity="0.30"/>
+  <circle cx="120" cy="100" r="3" fill="#f0c060" opacity="0.20"/>
+  <circle cx="700" cy="100" r="4" fill="#f0c060" opacity="0.30"/>
+  <circle cx="680" cy="100" r="3" fill="#f0c060" opacity="0.20"/>
+  <circle cx="100" cy="500" r="4" fill="#f0c060" opacity="0.25"/>
+  <circle cx="700" cy="500" r="4" fill="#f0c060" opacity="0.25"/>
+  <!-- Text -->
+  <text x="400" y="440" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#fff" opacity="0.90">Jade Garden</text>
+  <text x="400" y="475" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#f0c060" letter-spacing="4" opacity="0.85">CHINESE FEET</text>
+  <text x="400" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" letter-spacing="3">ONLYFEET.ASIA</text>
+</svg>

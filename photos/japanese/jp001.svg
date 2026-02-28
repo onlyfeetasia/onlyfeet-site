@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1a0820"/><stop offset="100%" stop-color="#3d1045"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="#ff8fab" stop-opacity="0.18"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+    <radialGradient id="spot" cx="50%" cy="45%" r="35%"><stop offset="0%" stop-color="#fff" stop-opacity="0.07"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <rect width="800" height="600" fill="url(#spot)"/>
+  <!-- Sakura petals -->
+  <circle cx="120" cy="90" r="9" fill="#ff8fab" opacity="0.35"/><circle cx="140" cy="75" r="6" fill="#ff8fab" opacity="0.25"/>
+  <circle cx="680" cy="120" r="7" fill="#ff8fab" opacity="0.30"/><circle cx="700" cy="100" r="5" fill="#ff8fab" opacity="0.20"/>
+  <circle cx="60"  cy="200" r="5" fill="#ff8fab" opacity="0.20"/><circle cx="740" cy="350" r="8" fill="#ff8fab" opacity="0.25"/>
+  <circle cx="200" cy="500" r="6" fill="#ff8fab" opacity="0.18"/><circle cx="600" cy="520" r="5" fill="#ff8fab" opacity="0.18"/>
+  <!-- Decorative ring -->
+  <circle cx="400" cy="270" r="130" fill="none" stroke="#ff8fab" stroke-width="0.8" opacity="0.20"/>
+  <circle cx="400" cy="270" r="110" fill="none" stroke="#ff8fab" stroke-width="0.5" opacity="0.15"/>
+  <circle cx="400" cy="270" r="88"  fill="rgba(255,143,171,0.06)"/>
+  <!-- Cross lines -->
+  <line x1="400" y1="155" x2="400" y2="385" stroke="#ff8fab" stroke-width="0.5" opacity="0.12"/>
+  <line x1="285" y1="270" x2="515" y2="270" stroke="#ff8fab" stroke-width="0.5" opacity="0.12"/>
+  <!-- Text -->
+  <text x="400" y="440" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#fff" opacity="0.90">Sakura Elegance</text>
+  <text x="400" y="475" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#ff8fab" letter-spacing="4" opacity="0.85">JAPANESE FEET</text>
+  <text x="400" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" letter-spacing="3">ONLYFEET.ASIA</text>
+</svg>

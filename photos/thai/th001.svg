@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a0810"/><stop offset="100%" stop-color="#1a1228"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="55%"><stop offset="0%" stop-color="#ffd700" stop-opacity="0.22"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <!-- Temple roof silhouette (tiered) -->
+  <polygon points="400,80 300,180 500,180" fill="rgba(255,215,0,0.10)" stroke="#ffd700" stroke-width="0.8" opacity="0.22"/>
+  <polygon points="400,130 270,230 530,230" fill="rgba(255,215,0,0.08)" stroke="#ffd700" stroke-width="0.7" opacity="0.18"/>
+  <polygon points="400,180 240,280 560,280" fill="rgba(255,215,0,0.07)" stroke="#ffd700" stroke-width="0.6" opacity="0.15"/>
+  <!-- Spire -->
+  <line x1="400" y1="30" x2="400" y2="80" stroke="#ffd700" stroke-width="1.5" opacity="0.30"/>
+  <!-- Temple columns (abstract) -->
+  <rect x="300" y="280" width="8" height="150" fill="rgba(255,215,0,0.10)"/>
+  <rect x="492" y="280" width="8" height="150" fill="rgba(255,215,0,0.10)"/>
+  <!-- Incense smoke -->
+  <ellipse cx="400" cy="350" rx="15" ry="50" fill="rgba(255,215,0,0.05)" transform="rotate(-8,400,350)"/>
+  <!-- Text -->
+  <text x="400" y="460" text-anchor="middle" font-family="Georgia,serif" font-size="30" fill="#fff" opacity="0.90">Temple Blessing</text>
+  <text x="400" y="495" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#ffd700" letter-spacing="4" opacity="0.85">THAI FEET</text>
+  <text x="400" y="520" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" letter-spacing="3">ONLYFEET.ASIA</text>
+</svg>
