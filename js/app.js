@@ -18,14 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function setActiveNav() {
-  const path = window.location.pathname.split('/').pop() || 'index.html';
+  const path = window.location.pathname.replace(/\/$/, '') || '/';
   document.querySelectorAll('.nav-link').forEach(l => {
-    const lhref = l.getAttribute('href').split('/').pop();
-    if (
-      (lhref === path) ||
-      (lhref === 'index.html' && path === '') ||
-      (lhref === '' && path === 'index.html')
-    ) {
+    const lhref = l.getAttribute('href').replace(/\/$/, '') || '/';
+    const lpage = lhref.split('/').pop();
+    const page  = path.split('/').pop();
+    if (lhref === '/' ? (path === '/' || page === '') : lpage === page) {
       l.classList.add('active');
     }
   });
