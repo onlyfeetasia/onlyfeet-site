@@ -60,7 +60,7 @@ function photoCardHTML(photo, catMap) {
 }
 
 function openPhoto(id) {
-  window.location.href = `photo.html?id=${id}`;
+  window.location.href = `/photo?id=${id}`;
 }
 
 /* ── Carousel ───────────────────────────────────────────────── */
@@ -131,7 +131,7 @@ async function initHome() {
           <p class="slide-desc">${p.description}</p>
           <div class="slide-meta">
             <span class="slide-views">${fmtViews(p.views)} views</span>
-            <a class="btn-view" href="photo.html?id=${p.id}">View Photo →</a>
+            <a class="btn-view" href="/photo?id=${p.id}">View Photo →</a>
           </div>
         </div>
       </div>`).join('');
@@ -233,13 +233,13 @@ async function initCategories() {
 }
 
 function gotoCategory(id) {
-  window.location.href = `gallery.html?cat=${id}`;
+  window.location.href = `/gallery?cat=${id}`;
 }
 
 /* ── Init: Photo Page ───────────────────────────────────────── */
 async function initPhoto() {
   const id = new URLSearchParams(window.location.search).get('id');
-  if (!id) { window.location.href = 'gallery.html'; return; }
+  if (!id) { window.location.href = '/gallery'; return; }
 
   recordView(id);
 
@@ -249,7 +249,7 @@ async function initPhoto() {
     getCategories()
   ]);
 
-  if (!photo) { window.location.href = 'gallery.html'; return; }
+  if (!photo) { window.location.href = '/gallery'; return; }
 
   const catMap = Object.fromEntries(categories.map(c => [c.id, c]));
   const cat = catMap[photo.category];

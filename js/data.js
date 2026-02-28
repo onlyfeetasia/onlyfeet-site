@@ -20,6 +20,8 @@ async function loadManifest() {
   const local = getLocalViews();
   data.photos = data.photos.map(p => ({
     ...p,
+    file:  p.file.startsWith('/')  ? p.file  : '/' + p.file,
+    thumb: p.thumb.startsWith('/') ? p.thumb : '/' + p.thumb,
     views: p.views + (local[p.id] || 0)
   }));
 
