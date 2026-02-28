@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#08080f"/>
+  <!-- Foot pad -->
+  <ellipse cx="15.5" cy="22" rx="7.5" ry="7" fill="#d4af7a"/>
+  <!-- Big toe -->
+  <ellipse cx="9"    cy="14.5" rx="2.3" ry="2.8" fill="#d4af7a"/>
+  <!-- Second toe -->
+  <ellipse cx="13"   cy="12.5" rx="2"   ry="2.5" fill="#d4af7a"/>
+  <!-- Middle toe -->
+  <ellipse cx="17"   cy="12"   rx="2"   ry="2.5" fill="#d4af7a"/>
+  <!-- Fourth toe -->
+  <ellipse cx="21"   cy="13"   rx="1.8" ry="2.3" fill="#d4af7a"/>
+  <!-- Pinky toe -->
+  <ellipse cx="24.5" cy="15"   rx="1.4" ry="1.8" fill="#d4af7a"/>
+</svg>
