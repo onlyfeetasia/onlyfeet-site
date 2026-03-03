@@ -13,15 +13,16 @@ let _cache = null;
 async function loadManifest() {
   if (_cache) return _cache;
 
-  const resp = await fetch(DATA_URL);
+  const resp = await fetch(DATA_URL + '?t=' + Date.now(), { cache: 'no-store' });
   if (!resp.ok) throw new Error('Failed to load manifest');
   const data = await resp.json();
 
+  const v = data.version ? '?v=' + data.version : '';
   const local = getLocalViews();
   data.photos = data.photos.map(p => ({
     ...p,
-    file:  p.file.startsWith('/')  ? p.file  : '/' + p.file,
-    thumb: p.thumb.startsWith('/') ? p.thumb : '/' + p.thumb,
+    file:  (p.file.startsWith('/')  ? p.file  : '/' + p.file)  + v,
+    thumb: (p.thumb.startsWith('/') ? p.thumb : '/' + p.thumb) + v,
     views: p.views + (local[p.id] || 0)
   }));
 
