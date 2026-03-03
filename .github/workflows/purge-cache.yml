@@ -15,7 +15,7 @@ jobs:
             -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
             -H "Content-Type: application/json" \
             --data '{"purge_everything":true}' | tee /tmp/cf_response.json
-          if ! grep -q '"success":true' /tmp/cf_response.json; then
+          if ! grep -q '"success":\s*true' /tmp/cf_response.json; then
             echo "Cache purge failed:"
             cat /tmp/cf_response.json
             exit 1
