@@ -47,6 +47,14 @@
       "flag": "🇻🇳",
       "description": "Slender, delicate, and endlessly captivating. Vietnamese feet reflect the quiet, understated beauty that defines the country's soul — silk-soft, graceful, and impossible to forget.",
       "accent": "#40d090"
+    },
+    {
+      "id": "latina",
+      "label": "Latina Feet",
+      "shortLabel": "Latina",
+      "flag": "🌶️",
+      "description": "Passion, warmth, and fire — distilled into the most captivating feet in the Western Hemisphere. Sun-kissed skin, vibrant nails, and an energy that radiates from every curve. Latina feet don't just walk into a room. They own it.",
+      "accent": "#e84040"
     }
   ],
   "photos": [
@@ -550,7 +558,79 @@
         "city",
         "modern"
       ]
+    },
+    {
+      "id": "lt001",
+      "file": "photos/latina/lt001.jpg",
+      "thumb": "photos/latina/lt001.jpg",
+      "category": "latina",
+      "title": "Terracotta Passion",
+      "description": "Sun-kissed Latina feet rest on ancient terracotta tiles, the warm golden-brown skin glowing in natural afternoon light. Deep crimson nails catch the sun like jewels. This is what untamed beauty looks like.",
+      "views": 5891,
+      "featured": true,
+      "date": "2026-03-07",
+      "tags": [
+        "latina",
+        "terracotta",
+        "warm",
+        "elegant",
+        "outdoor"
+      ]
+    },
+    {
+      "id": "lt002",
+      "file": "photos/latina/lt002.jpg",
+      "thumb": "photos/latina/lt002.jpg",
+      "category": "latina",
+      "title": "Turquoise Dreams",
+      "description": "Olive-toned Latina feet half-submerged in a crystal-clear turquoise pool, coral nails gleaming beneath the rippled surface. The contrast of warmth and water is nothing short of intoxicating.",
+      "views": 4720,
+      "featured": true,
+      "date": "2026-03-07",
+      "tags": [
+        "latina",
+        "pool",
+        "water",
+        "turquoise",
+        "summer"
+      ]
+    },
+    {
+      "id": "lt003",
+      "file": "photos/latina/lt003.jpg",
+      "thumb": "photos/latina/lt003.jpg",
+      "category": "latina",
+      "title": "Playa Paradise",
+      "description": "White sand clings to warm golden-brown Latina feet on a tropical beach, fuchsia nails defying the sun. Behind them, the ocean stretches to the horizon. Some things are simply inevitable.",
+      "views": 4102,
+      "featured": false,
+      "date": "2026-03-07",
+      "tags": [
+        "latina",
+        "beach",
+        "sand",
+        "tropical",
+        "ocean"
+      ]
+    },
+    {
+      "id": "lt004",
+      "file": "photos/latina/lt004.jpg",
+      "thumb": "photos/latina/lt004.jpg",
+      "category": "latina",
+      "title": "Woven Heritage",
+      "description": "Rich warm olive Latina feet rest on a hand-woven textile bursting with colour and tradition. Burgundy nails, golden-hour warmth, a tapestry of culture beneath them. Heritage never looked so alive.",
+      "views": 3877,
+      "featured": false,
+      "date": "2026-03-07",
+      "tags": [
+        "latina",
+        "textile",
+        "culture",
+        "heritage",
+        "warm"
+      ]
     }
   ],
-  "version": 1772510018
+  "version": 1772940260
 }
