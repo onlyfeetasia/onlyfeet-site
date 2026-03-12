@@ -268,7 +268,7 @@ async function initPhoto() {
     el('photo-tags').innerHTML = (photo.tags || []).map(t => `<span class="tag">#${t}</span>`).join('');
   }
   if (el('back-cat')) {
-    el('back-cat').href = `gallery.html?cat=${photo.category}`;
+    el('back-cat').href = `/gallery/?cat=${photo.category}`;
     el('back-cat').textContent = `← Back to ${cat?.label || 'Gallery'}`;
   }
 
