@@ -1,5 +1,5 @@
 // Publishes a folder of photos as the onlyfeet.asia/wedding gallery.
-//   1. makes thumbnails (800px) and viewer images (2200px) with sharp
+//   1. makes thumbnails (800px) and viewer images (2200px) with sharp (HEIC photos are decoded with heic-decode)
 //   2. uploads the untouched originals to a GitHub release, so guests can download them
 //   3. commits wedding/thumbs, wedding/web and wedding/photos.json to the site repo and pushes
 //   4. waits for the GitHub Pages deploy and the Cloudflare cache purge, then checks the live site
@@ -15,7 +15,7 @@ import path from 'node:path';
 import os from 'node:os';
 import https from 'node:https';
 import readline from 'node:readline/promises';
-import { execFileSync } from 'node:child_process';
+import { execFileSync, execSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const argv = process.argv.slice(2);
@@ -111,6 +111,17 @@ async function waitForSite(sha, photos) {
   }
 }
 
+// ---------- HEIC support (installed on first use) ----------
+async function loadHeic() {
+  const load = async () => (await import('heic-decode')).default;
+  try { return await load(); } catch {
+    log('\nInstalling the HEIC decoder (first time only)...');
+    try { execSync('npm install heic-decode --no-audit --no-fund', { cwd: HOME, stdio: 'inherit' }); }
+    catch { die('Could not install the HEIC decoder (npm install heic-decode failed).'); }
+    return await load();
+  }
+}
+
 // ---------- main ----------
 async function main() {
   if (!TOKEN) die('GH_TOKEN is not set (the launcher file sets it).');
@@ -123,7 +134,7 @@ async function main() {
   log(`Signed in to GitHub as ${me.login}; publishing to ${REPO}.`);
 
   // 1. find the photos
-  const IMG = /\.(jpe?g|png|tiff?|webp)$/i, RAW = /\.(3fr|fff|dng|cr2|cr3|nef|arw|raf|orf|rw2)$/i;
+  const IMG = /\.(jpe?g|png|tiff?|webp|heic|heif)$/i, RAW = /\.(3fr|fff|dng|cr2|cr3|nef|arw|raf|orf|rw2)$/i;
   const walk = async dir => {
     const out = [];
     for (const e of await fsp.readdir(dir, { withFileTypes: true })) {
@@ -143,10 +154,12 @@ async function main() {
     if (used.has(id.toLowerCase())) id = clean(path.relative(SRC, p).slice(0, -ext.length).split(path.sep).join('_'));
     for (let n = 2, base = id; used.has(id.toLowerCase()); n++) id = `${base}_${n}`;
     used.add(id.toLowerCase());
-    return { src: p, id, f: id + ext, size: fs.statSync(p).size };
+    const heic = /\.hei[cf]$/i.test(p), size = fs.statSync(p).size;
+    // HEIC files are converted to full-size JPEG for the downloads, because most PCs and phones can't open HEIC
+    return { src: p, id, heic, f: id + (heic ? '.jpg' : ext), size, upSrc: heic ? path.join(OUT, 'full', id + '.jpg') : p, upSize: size };
   });
   const total = photos.reduce((s, p) => s + p.size, 0);
-  if (!photos.length) die('No JPEG/TIFF/PNG/WebP photos found in that folder.' + (raws.length ? ` (${raws.length} RAW files were found, but those can't be used.)` : ''));
+  if (!photos.length) die('No JPEG/HEIC/TIFF/PNG/WebP photos found in that folder.' + (raws.length ? ` (${raws.length} RAW files were found, but those can't be used.)` : ''));
   if (photos.length > 1000) die(`${photos.length} photos is more than one GitHub release can hold (1000).`);
   const huge = photos.filter(p => p.size >= 2 * 1024 ** 3);
   if (huge.length) die(`${huge.length} file(s) are 2 GB or larger, which GitHub releases don't allow (first: ${huge[0].src}).`);
@@ -154,7 +167,9 @@ async function main() {
   const byDir = new Map();
   for (const p of photos) { const d = path.relative(SRC, path.dirname(p.src)) || '(top level)'; byDir.set(d, (byDir.get(d) || 0) + 1); }
   for (const [d, n] of byDir) log(`  ${String(n).padStart(5)}  ${d}`);
-  if (raws.length) log(`  (${raws.length} RAW files ignored: only JPEG/TIFF/PNG/WebP are used)`);
+  const nHeic = photos.filter(p => p.heic).length;
+  if (nHeic) log(`  ${nHeic} are HEIC: they will be converted to full-size JPEG for the downloads (a few seconds each)`);
+  if (raws.length) log(`  (${raws.length} RAW files ignored: only JPEG/TIFF/PNG/WebP/HEIC are used)`);
   if (!has('--yes')) {
     const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
     const ans = (await rl.question(`\nPublish these ${photos.length} photos publicly at ${SITE} ? [Y/n] `)).trim().toLowerCase();
@@ -167,6 +182,8 @@ async function main() {
   await fsp.mkdir(path.join(OUT, 'thumbs'), { recursive: true });
   await fsp.mkdir(path.join(OUT, 'web'), { recursive: true });
   sharp.cache(false);
+  const heicDecode = photos.some(p => p.heic) ? await loadHeic() : null;
+  await fsp.mkdir(path.join(OUT, 'full'), { recursive: true });
   let next = 0, done = 0;
   const worker = async () => {
     while (next < photos.length) {
@@ -174,8 +191,16 @@ async function main() {
       const t = path.join(OUT, 'thumbs', p.id + '.jpg'), w = path.join(OUT, 'web', p.id + '.jpg');
       let info;
       const fresh = f => fs.existsSync(f) && fs.statSync(f).size > 0 && fs.statSync(f).mtimeMs > fs.statSync(p.src).mtimeMs;
-      if (fresh(t) && fresh(w)) info = await sharp(t).metadata();
-      else {
+      if (fresh(t) && fresh(w) && (!p.heic || fresh(p.upSrc))) info = await sharp(t).metadata();
+      else if (p.heic) {
+        const { width, height, data } = await heicDecode({ buffer: await fsp.readFile(p.src) });
+        const base = sharp(Buffer.from(data.buffer, data.byteOffset, data.byteLength), { raw: { width, height, channels: 4 }, limitInputPixels: false }).removeAlpha();
+        [info] = await Promise.all([
+          base.clone().resize(THUMB, THUMB, { fit: 'inside', withoutEnlargement: true }).jpeg({ quality: 72, mozjpeg: true }).toFile(t),
+          base.clone().resize(WEB, WEB, { fit: 'inside', withoutEnlargement: true }).jpeg({ quality: 78, mozjpeg: true }).toFile(w),
+          base.clone().jpeg({ quality: 92 }).toFile(p.upSrc),
+        ]);
+      } else {
         const base = sharp(p.src, { failOn: 'none', limitInputPixels: false }).rotate();
         [info] = await Promise.all([
           base.clone().resize(THUMB, THUMB, { fit: 'inside', withoutEnlargement: true }).jpeg({ quality: 72, mozjpeg: true }).toFile(t),
@@ -183,6 +208,7 @@ async function main() {
         ]);
       }
       p.w = info.width; p.h = info.height;
+      if (p.heic) p.upSize = fs.statSync(p.upSrc).size;
       process.stdout.write(`\r  ${++done}/${photos.length}`);
     }
   };
@@ -224,17 +250,17 @@ async function main() {
   const todo = [];
   for (const p of photos) {
     const a = have.get(p.f);
-    if (a && a.size === p.size && a.state === 'uploaded') continue;
+    if (a && a.size === p.upSize && a.state === 'uploaded') continue;
     if (a) await api('DELETE', `/repos/${REPO}/releases/assets/${a.id}`);
     todo.push(p);
   }
-  log(`  ${photos.length - todo.length} already uploaded, ${todo.length} to upload (${fmt(todo.reduce((s, p) => s + p.size, 0))})`);
+  log(`  ${photos.length - todo.length} already uploaded, ${todo.length} to upload (${fmt(todo.reduce((s, p) => s + p.upSize, 0))})`);
   const uploadBase = rel.upload_url.split('{')[0];
   const uploadOnce = p => new Promise((resolve, reject) => {
     const type = /\.png$/i.test(p.f) ? 'image/png' : /\.tiff?$/i.test(p.f) ? 'image/tiff' : /\.webp$/i.test(p.f) ? 'image/webp' : 'image/jpeg';
     const req = https.request(`${uploadBase}?name=${encodeURIComponent(p.f)}`, {
       method: 'POST',
-      headers: { Authorization: 'Bearer ' + TOKEN, Accept: 'application/vnd.github+json', 'User-Agent': 'wedding-publisher', 'Content-Type': type, 'Content-Length': p.size },
+      headers: { Authorization: 'Bearer ' + TOKEN, Accept: 'application/vnd.github+json', 'User-Agent': 'wedding-publisher', 'Content-Type': type, 'Content-Length': p.upSize },
     }, res => {
       let b = ''; res.on('data', d => (b += d));
       res.on('end', () => {
@@ -243,7 +269,7 @@ async function main() {
       });
     });
     req.on('error', reject);
-    fs.createReadStream(p.src).on('error', reject).pipe(req);
+    fs.createReadStream(p.upSrc).on('error', reject).pipe(req);
   });
   const putAsset = async p => {
     for (let attempt = 1; ; attempt++) {
@@ -261,12 +287,12 @@ async function main() {
     while (ni < todo.length) {
       const p = todo[ni++];
       await putAsset(p);
-      log(`  [${++nd}/${todo.length}] ${p.f}  ${fmt(p.size)}`);
+      log(`  [${++nd}/${todo.length}] ${p.f}  ${fmt(p.upSize)}`);
     }
   };
   await Promise.all([upWorker(), upWorker()]);
   const after = new Map((await listAssets()).map(a => [a.name, a]));
-  const bad = photos.filter(p => { const a = after.get(p.f); return !a || a.size !== p.size || a.state !== 'uploaded'; });
+  const bad = photos.filter(p => { const a = after.get(p.f); return !a || a.size !== p.upSize || a.state !== 'uploaded'; });
   if (bad.length) die(`${bad.length} originals did not upload correctly (first: ${bad[0].f}). Run the file again to retry them.`);
   log('  all originals are in the release.');
   })();
